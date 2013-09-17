@@ -1,8 +1,15 @@
 class apache {
-  
+    
   package {
     'httpd':
       ensure => present
+  }
+  
+  # Add apache user to group 'vagrant' to read mounted devices
+  user { 'apache':
+    ensure => present,
+    groups => ['apache', 'vagrant'],
+    require => Package['httpd'];
   }
 
   file {

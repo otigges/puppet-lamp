@@ -5,5 +5,7 @@ include apache
 include php
 include php::composer
 
+php::laravel {'laravel': }
+
 #include jenkins
 #include sonar

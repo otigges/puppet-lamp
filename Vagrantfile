@@ -17,7 +17,6 @@ Vagrant::Config.run do |config|
     end
   end
   
-  
   config.vm.share_folder "work", "/var/www/laravel", "../laravel-sample"
 
 end
